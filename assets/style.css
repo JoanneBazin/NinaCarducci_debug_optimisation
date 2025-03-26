@@ -6,6 +6,11 @@ body {
   font-family: "Inter";
   font-style: normal;
 }
+
+h2 {
+  font-size: 28px;
+}
+
 #header {
   background-color: white;
   position: sticky;
@@ -78,11 +83,14 @@ body {
   margin-bottom: 60px;
   font-size: 30px;
 }
-.about-me__introduction {
+#about-me .about-me__introduction {
   font-family: "Spectral";
   font-weight: 800;
   font-style: italic;
   width: 60%;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 #about-me p {
   width: 80%;
@@ -99,7 +107,7 @@ body {
 .nav-pills .nav-link.active-tag,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #beb45a;
+  background-color: #807832;
   border-radius: 0;
 }
 .nav-pills .nav-link {
@@ -185,6 +193,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
+}
+
+.service__price p {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 #contact {
