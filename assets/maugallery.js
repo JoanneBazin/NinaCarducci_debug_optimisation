@@ -106,13 +106,49 @@
     responsiveImageItem(element) {
       if (element.prop("tagName") === "IMG") {
         element.addClass("img-fluid");
+        element.attr("tabindex", "0");
+        element.attr("role", "button");
+        element.on("keydown", function (e) {
+          if (e.key === "Enter") {
+            $(this).click();
+          }
+        });
       }
     },
     openLightBox(element, lightboxId) {
-      $(`#${lightboxId}`)
-        .find(".lightboxImage")
-        .attr("src", element.attr("src"));
-      $(`#${lightboxId}`).modal("toggle");
+      const $lightbox = $(`#${lightboxId}`);
+      const $prev = $lightbox.find(".mg-prev");
+      const $next = $lightbox.find(".mg-next");
+      $lightbox.find(".lightboxImage").attr("src", element.attr("src"));
+
+      $lightbox.attr("aria-hidden", "false");
+      $lightbox.attr("aria-modal", "true");
+      $lightbox.attr("tabindex", "0");
+
+      $prev.attr("tabindex", "0");
+      $prev.on("keydown", function (e) {
+        if (e.key === "Enter") {
+          $(this).click();
+        }
+      });
+      $next.attr("tabindex", "0");
+      $next.on("keydown", function (e) {
+        if (e.key === "Enter") {
+          $(this).click();
+        }
+      });
+
+      $lightbox.modal("toggle");
+
+      $lightbox.on("hidden.bs.modal", function () {
+        $lightbox.attr("aria-hidden", "true");
+        $lightbox.removeAttr("aria-modal");
+        $lightbox.attr("tabindex", "-1");
+        $prev.attr("tabindex", "-1");
+        $next.attr("tabindex", "-1");
+        $prev.off("keydown");
+        $next.off("keydown");
+      });
     },
 
     prevImage() {
