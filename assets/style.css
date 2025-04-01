@@ -47,6 +47,15 @@ h2 {
   width: 20px;
 }
 
+.carousel-control-prev {
+  filter: invert(49%) sepia(15%) saturate(684%) hue-rotate(10deg)
+    brightness(92%) contrast(90%);
+}
+.carousel-control-next {
+  filter: invert(49%) sepia(15%) saturate(684%) hue-rotate(10deg)
+    brightness(92%) contrast(90%);
+}
+
 #about {
   display: flex;
   background-color: #f6d2b8;

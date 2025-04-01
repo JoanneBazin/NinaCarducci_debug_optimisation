@@ -119,6 +119,9 @@
       const $lightbox = $(`#${lightboxId}`);
       const $prev = $lightbox.find(".mg-prev");
       const $next = $lightbox.find(".mg-next");
+
+      $lightbox.data("last-focused", document.activeElement);
+
       $lightbox.find(".lightboxImage").attr("src", element.attr("src"));
 
       $lightbox.attr("aria-hidden", "false");
@@ -141,6 +144,7 @@
       $lightbox.modal("toggle");
 
       $lightbox.on("hidden.bs.modal", function () {
+        $(this).data("last-focused").focus();
         $lightbox.attr("aria-hidden", "true");
         $lightbox.removeAttr("aria-modal");
         $lightbox.attr("tabindex", "-1");
