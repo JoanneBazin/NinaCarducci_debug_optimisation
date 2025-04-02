@@ -16,11 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="preload"
-      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
-      as="image"
-    />
+
     <link rel="icon" href="data:," />
     <title>Nina Carducci - Photographe à Bordeaux</title>
     <meta
@@ -46,7 +42,7 @@
     />
     <meta
       property="og:image"
-      content="https://joannebazin.github.io/NinaCarducci_debug_optimisation/assets/images/ryoji-iwata-meta.jpg?v=123"
+      content="https://nina-carducci.github.io/assets/images/ryoji-iwata-meta.jpg?v=123"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -63,7 +59,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://joannebazin.github.io/NinaCarducci_debug_optimisation/assets/images/ryoji-iwata-meta.jpg?v=123"
+      content="https://nina-carducci.github.io/assets/images/ryoji-iwata-meta.jpg?v=123"
     />
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
@@ -123,11 +119,14 @@
               src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
               srcset="
                 ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-mobile.webp  480w,
+                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-medium.webp  820w,
                 ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp        2000w
               "
               sizes="(max-width: 480px) 100vw, (min-width: 481px) 100vw"
               class="d-block w-100"
               alt="Photo en plongée d'un homme traversant la rue"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
           <div class="carousel-item">
@@ -183,10 +182,10 @@
         <img
           src="./assets/images/nina.webp"
           srcset="
-            ./assets/images/nina-mobile.webp 334w,
+            ./assets/images/nina-mobile.webp 333w,
             ./assets/images/nina.webp        700w
           "
-          sizes="(max-width: 480px) 334px, (min-width: 481px) 700px"
+          sizes="(max-width: 480px) 333px, (min-width: 481px) 700px"
           alt="Photo de Nina Carducci, photographe professionelle à Bordeaux"
         />
       </figure>
@@ -445,8 +444,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./assets/maugallery.js" defer></script>
-    <script src="./assets/scripts.js" defer></script>
+    <script src="./assets/maugallery.min.js" defer></script>
+    <script src="./assets/scripts.min.js" defer></script>
 
     <script type="application/ld+json">
       {

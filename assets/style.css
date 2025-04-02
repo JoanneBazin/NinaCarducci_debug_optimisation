@@ -21,6 +21,7 @@ h2 {
   padding-inline: 100px;
   padding-block: 30px;
   align-items: center;
+  width: 100%;
 }
 
 #header .name {
@@ -45,6 +46,7 @@ h2 {
 
 .social-link img {
   width: 20px;
+  height: 20px;
 }
 
 .carousel-control-prev {
@@ -83,9 +85,12 @@ h2 {
 
 .picture img {
   width: 100%;
+  height: auto;
 }
 #about-me {
   flex: 2;
+  width: 100%;
+  height: auto;
 }
 .about-me__title {
   margin-top: 1em;
