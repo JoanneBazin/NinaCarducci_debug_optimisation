@@ -129,12 +129,14 @@
       $lightbox.attr("tabindex", "0");
 
       $prev.attr("tabindex", "0");
+      $prev.attr("aria-label", "Photo précédente");
       $prev.on("keydown", function (e) {
         if (e.key === "Enter") {
           $(this).click();
         }
       });
       $next.attr("tabindex", "0");
+      $prev.attr("aria-label", "Photo suivante");
       $next.on("keydown", function (e) {
         if (e.key === "Enter") {
           $(this).click();
